@@ -1,16 +1,19 @@
 // Dynamic Header Text Animation
 const headerText = document.getElementById("dynamic-text");
-const messages = ["Welcome to My Portfolio", "Explore My Work", "Let's Collaborate"];
+const messages = ["Welcome to Shruti's Portfolio", "Explore My Work", "Let's Collaborate"];
 let index = 0;
 
-setInterval(() => {
+const updateHeaderText = () => {
   headerText.textContent = messages[index];
   index = (index + 1) % messages.length;
-}, 3000);
+};
+
+setInterval(updateHeaderText, 3000); // Change text every 3 seconds
 
 // Scroll Reveal Animation
 const sections = document.querySelectorAll(".section");
-window.addEventListener("scroll", () => {
+
+const revealSections = () => {
   const triggerBottom = window.innerHeight * 0.8;
 
   sections.forEach((section) => {
@@ -20,16 +23,24 @@ window.addEventListener("scroll", () => {
       section.classList.add("visible");
     }
   });
-});
+};
 
-// Form Submission Handler
-const form = document.getElementById("contact-form");
-const confirmationMessage = document.getElementById("confirmation-message");
+// Run on Scroll and Page Load
+window.addEventListener("scroll", revealSections);
+window.addEventListener("load", revealSections);
 
-form.addEventListener("submit", (e) => {
-  e.preventDefault();
-  confirmationMessage.classList.remove("hidden");
-  setTimeout(() => {
-    confirmationMessage.classList.add("hidden");
-  }, 3000);
+// Smooth Scroll for Navigation Links
+const navLinks = document.querySelectorAll("nav a");
+
+navLinks.forEach((link) => {
+  link.addEventListener("click", (e) => {
+    e.preventDefault();
+    const targetId = e.target.getAttribute("href").slice(1);
+    const targetSection = document.getElementById(targetId);
+
+    window.scrollTo({
+      top: targetSection.offsetTop - 50, // Adjust offset if needed
+      behavior: "smooth",
+    });
+  });
 });
