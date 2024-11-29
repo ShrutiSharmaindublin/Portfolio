@@ -149,4 +149,22 @@ footer {
   opacity: 1; /* Show the section */
   visibility: visible; /* Show the section */
 }
+/* CTA Button Styles */
+.btn {
+  display: inline-block;
+  background: #4285f4;
+  color: #fff;
+  text-decoration: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 0.9rem;
+  margin-top: 10px;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.btn:hover {
+  background: #357ae8;
+  transform: scale(1.05);
+}
+
 
