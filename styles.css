@@ -126,3 +126,27 @@ footer {
   background: #333;
   color: #fff;
 }
+/* Existing styles in your styles.css */
+/* Add the new animation and hover styles below */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.section {
+  animation: fadeIn 1s ease-in-out;
+  opacity: 0; /* Start hidden */
+  visibility: hidden; /* Start hidden */
+}
+
+.section.visible {
+  opacity: 1; /* Show the section */
+  visibility: visible; /* Show the section */
+}
+
