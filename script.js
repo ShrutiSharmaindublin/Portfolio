@@ -1,6 +1,6 @@
 // Dynamic Header Text Animation
 const headerText = document.getElementById("dynamic-text");
-const messages = ["Welcome to Keerat's Portfolio", "Explore My Work", "Let's Collaborate"];
+const messages = ["Welcome to Shruti's Portfolio", "Explore My Work", "Let's Collaborate"];
 let index = 0;
 
 setInterval(() => {
