@@ -7,6 +7,7 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+  <!-- Header -->
   <header>
     <div class="container">
       <h1 id="dynamic-text">Welcome to Shruti's Portfolio</h1>
@@ -32,67 +33,38 @@
   <section id="projects" class="section">
     <div class="container">
       <h2>Projects</h2>
-      <div class="project-list">
-        <!-- Project 1 -->
-        <div class="project-card">
-          <h3>E-commerce Transformation</h3>
-          <p>Improved online customer experience for a retail giant using modern technologies.</p>
-          <a href="projects/project1.html" class="btn">View Details</a>
+      <div class="carousel">
+        <button class="carousel-button prev">&larr;</button>
+        <div class="carousel-track-container">
+          <ul class="carousel-track">
+            <!-- Project 1 -->
+            <li class="carousel-slide">
+              <div class="project-card">
+                <h3>E-commerce Transformation</h3>
+                <p>Improved online customer experience for a retail giant using modern technologies.</p>
+                <a href="projects/project1.html" class="btn">Visit</a>
+              </div>
+            </li>
+            <!-- Project 2 -->
+            <li class="carousel-slide">
+              <div class="project-card">
+                <h3>CRM Implementation</h3>
+                <p>Seamlessly integrated a CRM solution for better customer engagement and insights.</p>
+                <a href="projects/project2.html" class="btn">Visit</a>
+              </div>
+            </li>
+            <!-- Project 3 -->
+            <li class="carousel-slide">
+              <div class="project-card">
+                <h3>Compliance Risk Management</h3>
+                <p>Developed a compliance framework to ensure smooth operations for a multinational company.</p>
+                <a href="projects/project3.html" class="btn">Visit</a>
+              </div>
+            </li>
+            <!-- Add more projects as needed -->
+          </ul>
         </div>
-        <!-- Project 2 -->
-        <div class="project-card">
-          <h3>CRM Implementation</h3>
-          <p>Seamlessly integrated a CRM solution for better customer engagement and insights.</p>
-          <a href="projects/project2.html" class="btn">View Details</a>
-        </div>
-        <!-- Project 3 -->
-        <div class="project-card">
-          <h3>Compliance Risk Management</h3>
-          <p>Developed a compliance framework to ensure smooth operations for a multinational company.</p>
-          <a href="projects/project3.html" class="btn">View Details</a>
-        </div>
-        <!-- Project 4 -->
-        <div class="project-card">
-          <h3>Data Analytics Dashboard</h3>
-          <p>Built an interactive dashboard to track key business metrics for a logistics company.</p>
-          <a href="projects/project4.html" class="btn">View Details</a>
-        </div>
-        <!-- Project 5 -->
-        <div class="project-card">
-          <h3>AI-Powered Chatbot</h3>
-          <p>Designed a chatbot using AI to enhance customer support for an e-commerce platform.</p>
-          <a href="projects/project5.html" class="btn">View Details</a>
-        </div>
-        <!-- Project 6 -->
-        <div class="project-card">
-          <h3>Website Redesign</h3>
-          <p>Redesigned a corporate website, improving UX/UI and driving a 30% increase in traffic.</p>
-          <a href="projects/project6.html" class="btn">View Details</a>
-        </div>
-        <!-- Project 7 -->
-        <div class="project-card">
-          <h3>Inventory Management System</h3>
-          <p>Developed an automated inventory system, reducing manual errors by 50%.</p>
-          <a href="projects/project7.html" class="btn">View Details</a>
-        </div>
-        <!-- Project 8 -->
-        <div class="project-card">
-          <h3>Mobile App Development</h3>
-          <p>Built a cross-platform mobile app for a fitness startup with personalized recommendations.</p>
-          <a href="projects/project8.html" class="btn">View Details</a>
-        </div>
-        <!-- Project 9 -->
-        <div class="project-card">
-          <h3>Cloud Migration</h3>
-          <p>Migrated an on-premise application to the cloud, improving performance and scalability.</p>
-          <a href="projects/project9.html" class="btn">View Details</a>
-        </div>
-        <!-- Project 10 -->
-        <div class="project-card">
-          <h3>Marketing Automation</h3>
-          <p>Implemented a marketing automation system, increasing campaign efficiency by 40%.</p>
-          <a href="projects/project10.html" class="btn">View Details</a>
-        </div>
+        <button class="carousel-button next">&rarr;</button>
       </div>
     </div>
   </section>
