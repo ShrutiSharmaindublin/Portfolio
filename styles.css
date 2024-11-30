@@ -24,7 +24,6 @@ header {
   background: #4285f4;
   color: #fff;
   padding: 20px 0;
-  margin-bottom: 20px;
   text-align: center;
   position: sticky;
   top: 0;
@@ -53,14 +52,6 @@ header nav a:hover {
   margin-bottom: 20px;
   border-radius: 8px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  opacity: 0;
-  transform: translateY(30px);
-  transition: all 0.6s ease-out;
-}
-
-.section.visible {
-  opacity: 1;
-  transform: translateY(0);
 }
 
 .section h2 {
@@ -69,102 +60,91 @@ header nav a:hover {
   font-size: 1.5rem;
 }
 
-/* Projects */
-.project-list {
+/* Carousel */
+.carousel {
   display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  margin-top: 20px;
+}
+
+.carousel-track-container {
+  overflow: hidden;
+  width: 100%;
+}
+
+.carousel-track {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.carousel-slide {
+  flex: 0 0 300px;
+  margin-right: 20px;
 }
 
 .project-card {
-  background: #f4f4f4;
+  background: #fff;
   border: 1px solid #ddd;
+  border-radius: 8px;
   padding: 20px;
-  border-radius: 5px;
-  width: 300px;
   text-align: center;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 .project-card h3 {
-  margin-bottom: 10px;
   font-size: 1.2rem;
+  margin-bottom: 10px;
   color: #4285f4;
 }
 
-/* Contact */
-form input,
-form textarea,
-form button {
-  width: 100%;
-  margin: 10px 0;
-  padding: 10px;
-  font-size: 1rem;
+.project-card p {
+  font-size: 0.9rem;
+  margin-bottom: 15px;
 }
 
-form button {
-  background: #4285f4;
-  color: #fff;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-form button:hover {
-  background: #357ae8;
-}
-
-.hidden {
-  display: none;
-}
-
-/* Footer */
-footer {
-  text-align: center;
-  padding: 20px;
-  background: #333;
-  color: #fff;
-}
-/* Existing styles in your styles.css */
-/* Add the new animation and hover styles below */
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-.section {
-  animation: fadeIn 1s ease-in-out;
-  opacity: 0; /* Start hidden */
-  visibility: hidden; /* Start hidden */
-}
-
-.section.visible {
-  opacity: 1; /* Show the section */
-  visibility: visible; /* Show the section */
-}
-/* CTA Button Styles */
-.btn {
+.project-card .btn {
   display: inline-block;
   background: #4285f4;
   color: #fff;
   text-decoration: none;
   padding: 10px 20px;
   border-radius: 5px;
-  font-size: 0.9rem;
-  margin-top: 10px;
-  transition: background 0.3s ease, transform 0.3s ease;
+  transition: background 0.3s ease;
 }
 
-.btn:hover {
+.project-card .btn:hover {
   background: #357ae8;
-  transform: scale(1.05);
 }
 
+.carousel-button {
+  background: #4285f4;
+  border: none;
+  color: #fff;
+  font-size: 1.5rem;
+  border-radius: 50%;
+  height: 40px;
+  width: 40px;
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 2;
+}
 
+.carousel-button.prev {
+  left: 10px;
+}
+
+.carousel-button.next {
+  right: 10px;
+}
+
+.carousel-button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
