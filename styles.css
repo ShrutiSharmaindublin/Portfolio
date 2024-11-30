@@ -1,4 +1,4 @@
-/* General Reset */
+/* General Styles */
 * {
   margin: 0;
   padding: 0;
@@ -19,7 +19,7 @@ body {
   padding: 20px;
 }
 
-/* Header */
+/* Header Styles */
 header {
   background: #4285f4;
   color: #fff;
@@ -45,7 +45,7 @@ header nav a:hover {
   text-decoration: underline;
 }
 
-/* Sections */
+/* Section Styles */
 .section {
   background: #fff;
   padding: 40px 20px;
@@ -60,7 +60,7 @@ header nav a:hover {
   font-size: 1.5rem;
 }
 
-/* Carousel */
+/* Carousel Styles */
 .carousel {
   display: flex;
   align-items: center;
@@ -124,27 +124,6 @@ header nav a:hover {
 .carousel-button {
   background: #4285f4;
   border: none;
-  color: #fff;
-  font-size: 1.5rem;
-  border-radius: 50%;
-  height: 40px;
-  width: 40px;
-  cursor: pointer;
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  z-index: 2;
-}
 
-.carousel-button.prev {
-  left: 10px;
-}
-
-.carousel-button.next {
-  right: 10px;
-}
-
-.carousel-button:disabled {
-  opacity: 0.5;
-  cursor: not-allowed;
-}
+::contentReference[oaicite:0]{index=0}
+ 
