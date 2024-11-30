@@ -3,44 +3,35 @@ const headerText = document.getElementById("dynamic-text");
 const messages = ["Welcome to Shruti's Portfolio", "Explore My Work", "Let's Collaborate"];
 let index = 0;
 
-const updateHeaderText = () => {
+setInterval(() => {
   headerText.textContent = messages[index];
   index = (index + 1) % messages.length;
+}, 3000);
+
+// Carousel Functionality
+const track = document.querySelector('.carousel-track');
+const slides = Array.from(track.children);
+const prevButton = document.querySelector('.carousel-button.prev');
+const nextButton = document.querySelector('.carousel-button.next');
+const slideWidth = slides[0].getBoundingClientRect().width;
+
+slides.forEach((slide, index) => {
+  slide.style.left = `${slideWidth * index}px`;
+});
+
+const moveToSlide = (track, currentSlide, targetSlide) => {
+  track.style.transform = `translateX(-${targetSlide.style.left})`;
 };
 
-setInterval(updateHeaderText, 3000); // Change text every 3 seconds
+let currentIndex = 0;
+prevButton.addEventListener('click', () => {
+  currentIndex--;
+  const targetSlide = slides[currentIndex];
+  moveToSlide(track, slides[currentIndex + 1], targetSlide);
+});
 
-// Scroll Reveal Animation
-const sections = document.querySelectorAll(".section");
-
-const revealSections = () => {
-  const triggerBottom = window.innerHeight * 0.8;
-
-  sections.forEach((section) => {
-    const sectionTop = section.getBoundingClientRect().top;
-
-    if (sectionTop < triggerBottom) {
-      section.classList.add("visible");
-    }
-  });
-};
-
-// Run on Scroll and Page Load
-window.addEventListener("scroll", revealSections);
-window.addEventListener("load", revealSections);
-
-// Smooth Scroll for Navigation Links
-const navLinks = document.querySelectorAll("nav a");
-
-navLinks.forEach((link) => {
-  link.addEventListener("click", (e) => {
-    e.preventDefault();
-    const targetId = e.target.getAttribute("href").slice(1);
-    const targetSection = document.getElementById(targetId);
-
-    window.scrollTo({
-      top: targetSection.offsetTop - 50, // Adjust offset if needed
-      behavior: "smooth",
-    });
-  });
+nextButton.addEventListener('click', () => {
+  currentIndex++;
+  const targetSlide = slides[currentIndex];
+  moveToSlide(track, slides[currentIndex - 1], targetSlide);
 });
