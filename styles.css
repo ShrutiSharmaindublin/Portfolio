@@ -11,7 +11,7 @@ header {
     position: fixed;
     top: 0;
     width: 100%;
-    background: linear-gradient(90deg, #004aad, #0066ff);
+    background: #008BFF; /* Updated to match the provided blue color */
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     z-index: 1000;
     padding: 10px 0;
@@ -91,7 +91,7 @@ section {
 }
 
 #contact {
-    background: #004aad;
+    background: #007BFF; /* Updated to match the provided blue color */
     color: white;
 }
 
@@ -111,7 +111,7 @@ section {
 }
 
 #contact-form button {
-    background: #0066ff;
+    background: #0056b3; /* Slightly darker blue for button */
     color: white;
     border: none;
     padding: 10px 20px;
@@ -120,7 +120,7 @@ section {
 }
 
 #contact-form button:hover {
-    background: #004aad;
+    background: #004aad; /* Darker hover effect */
 }
 
 /* Footer */
