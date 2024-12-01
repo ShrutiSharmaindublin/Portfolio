@@ -1,130 +1,17 @@
-/* General Reset */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  font-family: Arial, sans-serif;
-  color: #333;
-  background-color: #f9f9f9;
-}
-
-.container {
-  width: 90%;
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-/* Header */
-header {
-  background: #4285f4;
-  color: white;
-  padding: 10px 0;
-  text-align: center;
-}
-
-header h1 {
-  font-size: 2rem;
-}
-
-.navbar {
-  list-style: none;
-  display: flex;
-  justify-content: center;
-  margin-top: 10px;
-}
-
-.navbar li {
-  margin: 0 15px;
-}
-
-.navbar a {
-  text-decoration: none;
-  color: white;
-  font-size: 1rem;
-}
-
-.navbar a:hover {
-  text-decoration: underline;
-}
-
-/* Sections */
-.section {
-  padding: 40px 20px;
-  margin: 20px 0;
-  background: white;
-  border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-.section h2 {
-  text-align: center;
-  margin-bottom: 20px;
-}
-
-/* Carousel */
-.carousel {
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  overflow: hidden;
-}
-
-.carousel-track {
-  display: flex;
-  transition: transform 0.5s ease-in-out;
-}
-
-.carousel-slide {
-  flex: 0 0 300px;
-  margin-right: 20px;
-}
-
-.project-card {
-  padding: 20px;
-  text-align: center;
-  background: #f9f9f9;
-  border: 1px solid #ddd;
-  border-radius: 8px;
-}
-
-.project-card h3 {
-  margin-bottom: 10px;
-  font-size: 1.2rem;
-  color: #4285f4;
-}
-
-.project-card p {
-  margin-bottom: 10px;
-}
-
-.project-card a {
+/* CTA Button Styles */
+.btn {
   display: inline-block;
-  padding: 10px 15px;
   background: #4285f4;
-  color: white;
+  color: #fff;
   text-decoration: none;
-  border-radius: 4px;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 0.9rem;
+  margin-top: 10px;
+  transition: background 0.3s ease, transform 0.3s ease;
 }
 
-/* Contact Form */
-form input, form textarea {
-  display: block;
-  width: 100%;
-  margin-bottom: 10px;
-  padding: 10px;
-  border: 1px solid #ddd;
-  border-radius: 4px;
-}
-
-form button {
-  background: #4285f4;
-  color: white;
-  padding: 10px 15px;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
+.btn:hover {
+  background: #357ae8;
+  transform: scale(1.05);
 }
