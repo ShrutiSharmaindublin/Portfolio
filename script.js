@@ -1,28 +1,46 @@
-// Dynamic Text Effect
-const dynamicText = document.getElementById('dynamic-text');
-const messages = ["Welcome to Shruti's Portfolio", "Business Analyst", "E-commerce Specialist"];
-let i = 0;
+// Dynamic Header Text Animation
+const headerText = document.getElementById("dynamic-text");
+const messages = ["Welcome to Shruti's Portfolio", "Explore My Work", "Let's Collaborate"];
+let index = 0;
 
-setInterval(() => {
-  dynamicText.textContent = messages[i];
-  i = (i + 1) % messages.length;
-}, 3000);
+const updateHeaderText = () => {
+  headerText.textContent = messages[index];
+  index = (index + 1) % messages.length;
+};
 
-// Carousel Functionality
-const track = document.querySelector('.carousel-track');
-const slides = Array.from(track.children);
-const nextButton = document.querySelector('.carousel-button.next');
-const prevButton = document.querySelector('.carousel-button.prev');
-const slideWidth = slides[0].getBoundingClientRect().width;
+setInterval(updateHeaderText, 3000); // Change text every 3 seconds
 
-slides.forEach((slide, index) => {
-  slide.style.left = `${slideWidth * index}px`;
-});
+// Scroll Reveal Animation
+const sections = document.querySelectorAll(".section");
 
-nextButton.addEventListener('click', () => {
-  track.style.transform = `translateX(-${slideWidth}px)`;
-});
+const revealSections = () => {
+  const triggerBottom = window.innerHeight * 0.8;
 
-prevButton.addEventListener('click', () => {
-  track.style.transform = `translateX(${slideWidth}px)`;
+  sections.forEach((section) => {
+    const sectionTop = section.getBoundingClientRect().top;
+
+    if (sectionTop < triggerBottom) {
+      section.classList.add("visible");
+    }
+  });
+};
+
+// Run on Scroll and Page Load
+window.addEventListener("scroll", revealSections);
+window.addEventListener("load", revealSections);
+
+// Smooth Scroll for Navigation Links
+const navLinks = document.querySelectorAll("nav a");
+
+navLinks.forEach((link) => {
+  link.addEventListener("click", (e) => {
+    e.preventDefault();
+    const targetId = e.target.getAttribute("href").slice(1);
+    const targetSection = document.getElementById(targetId);
+
+    window.scrollTo({
+      top: targetSection.offsetTop - 50, // Adjust offset if needed
+      behavior: "smooth",
+    });
+  });
 });
