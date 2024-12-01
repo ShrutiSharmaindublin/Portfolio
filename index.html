@@ -1,123 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My Portfolio</title>
-  <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Business Analyst Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <header>
-    <div class="container">
-      <h1 id="dynamic-text">Welcome to Shruti's Portfolio</h1>
-      <nav>
-        <a href="#about">About</a>
-        <a href="#projects">Projects</a>
-        <a href="#contact">Contact</a>
-      </nav>
-    </div>
-  </header>
-
-  <!-- About Section -->
-  <section id="about" class="section">
-    <div class="container">
-      <h2>About Me</h2>
-      <p>
-        Hi! I'm Shruti, a Business Analyst with expertise in e-commerce, CRM implementation, regulatory compliance, and risk management. I aim to help companies transform their customer experiences while maintaining compliance and delivering value.
-      </p>
-    </div>
-  </section>
-
-  <!-- Projects Section -->
-  <section id="projects" class="section">
-    <div class="container">
-      <h2>Projects</h2>
-      <div class="project-list">
-        <!-- Project 1 -->
-        <div class="project-card">
-          <h3>E-commerce Transformation</h3>
-          <p>Improved online customer experience for a retail giant using modern technologies.</p>
-          <a href="projects/project1.html" class="btn">View Details</a>
-        </div>
-        <!-- Project 2 -->
-        <div class="project-card">
-          <h3>CRM Implementation</h3>
-          <p>Seamlessly integrated a CRM solution for better customer engagement and insights.</p>
-          <a href="projects/project2.html" class="btn">View Details</a>
-        </div>
-        <!-- Project 3 -->
-        <div class="project-card">
-          <h3>Compliance Risk Management</h3>
-          <p>Developed a compliance framework to ensure smooth operations for a multinational company.</p>
-          <a href="projects/project3.html" class="btn">View Details</a>
-        </div>
-        <!-- Project 4 -->
-        <div class="project-card">
-          <h3>Data Analytics Dashboard</h3>
-          <p>Built an interactive dashboard to track key business metrics for a logistics company.</p>
-          <a href="projects/project4.html" class="btn">View Details</a>
-        </div>
-        <!-- Project 5 -->
-        <div class="project-card">
-          <h3>AI-Powered Chatbot</h3>
-          <p>Designed a chatbot using AI to enhance customer support for an e-commerce platform.</p>
-          <a href="projects/project5.html" class="btn">View Details</a>
-        </div>
-        <!-- Project 6 -->
-        <div class="project-card">
-          <h3>Website Redesign</h3>
-          <p>Redesigned a corporate website, improving UX/UI and driving a 30% increase in traffic.</p>
-          <a href="projects/project6.html" class="btn">View Details</a>
-        </div>
-        <!-- Project 7 -->
-        <div class="project-card">
-          <h3>Inventory Management System</h3>
-          <p>Developed an automated inventory system, reducing manual errors by 50%.</p>
-          <a href="projects/project7.html" class="btn">View Details</a>
-        </div>
-        <!-- Project 8 -->
-        <div class="project-card">
-          <h3>Mobile App Development</h3>
-          <p>Built a cross-platform mobile app for a fitness startup with personalized recommendations.</p>
-          <a href="projects/project8.html" class="btn">View Details</a>
-        </div>
-        <!-- Project 9 -->
-        <div class="project-card">
-          <h3>Cloud Migration</h3>
-          <p>Migrated an on-premise application to the cloud, improving performance and scalability.</p>
-          <a href="projects/project9.html" class="btn">View Details</a>
-        </div>
-        <!-- Project 10 -->
-        <div class="project-card">
-          <h3>Marketing Automation</h3>
-          <p>Implemented a marketing automation system, increasing campaign efficiency by 40%.</p>
-          <a href="projects/project10.html" class="btn">View Details</a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Contact Section -->
-  <section id="contact" class="section">
-    <div class="container">
-      <h2>Contact Me</h2>
-      <p>Feel free to reach out to discuss opportunities or collaborations.</p>
-      <form id="contact-form">
-        <input type="text" id="name" placeholder="Your Name" required>
-        <input type="email" id="email" placeholder="Your Email" required>
-        <textarea id="message" placeholder="Your Message" rows="5" required></textarea>
-        <button type="submit">Send Message</button>
-      </form>
-      <p id="confirmation-message" class="hidden">Thank you for your message!</p>
-    </div>
-  </section>
-
-  <!-- Footer -->
-  <footer>
-    <p>&copy; 2024 Shruti. All rights reserved.</p>
-  </footer>
-
-  <!-- JavaScript -->
-  <script src="script.js"></script>
+    <header>
+        <nav>
+            <div class="logo">Shruti's Portfolio</div>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="about">
+            <h1>About Me</h1>
+            <p>
+                Hi! I'm Shruti, a Business Analyst with expertise in e-commerce, CRM implementation, regulatory compliance, and risk management. 
+                I aim to help companies transform their customer experiences while maintaining compliance and delivering value.
+            </p>
+        </section>
+        <section id="projects">
+            <h1>Projects</h1>
+            <div class="projects-grid">
+                <!-- Projects will be dynamically added here -->
+            </div>
+        </section>
+        <section id="contact">
+            <h1>Contact</h1>
+            <p>Feel free to reach out via email or LinkedIn. Let's collaborate!</p>
+            <form id="contact-form">
+                <input type="text" placeholder="Your Name" required>
+                <input type="email" placeholder="Your Email" required>
+                <textarea placeholder="Your Message" rows="5" required></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <p>© 2024 Shruti Sharma. All Rights Reserved.</p>
+    </footer>
+    <script src="script.js"></script>
 </body>
 </html>
